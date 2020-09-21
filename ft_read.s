@@ -1,13 +1,13 @@
-global ft_write
+global ft_read
 
 section .text
-ft_write: 
-        mov rax, 1
+ft_read:
+        mov rax, 0
         push rdx
         syscall
         pop rdx
         cmp rax, -errno
-        je erreur
+        je error
         ret
 
 error:

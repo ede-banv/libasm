@@ -31,3 +31,5 @@ ft_pos:
 
 ft_return:
         ret
+
+        ;subtraction: first movzx les 2 8bit puis faire la sub
