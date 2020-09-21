@@ -1,6 +1,6 @@
 global ft_strcmp
-
 section .text
+
 ft_strcmp: ;s1 = rdi, s2 = rsi
         xor rax, rax
         jmp ft_compare
@@ -24,12 +24,9 @@ ft_neg:
         jmp ft_return
 
 ft_pos:
-        sub r8b, [rsi + rax]
-        cmp r8b, 0
+        cmp r8b, [rsi + rax]
         je ft_return
         mov rax, 1
 
 ft_return:
         ret
-
-        ;subtraction: first movzx les 2 8bit puis faire la sub

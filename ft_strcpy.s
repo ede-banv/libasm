@@ -2,7 +2,7 @@ global ft_strcpy
 
 section .text
 ft_strcpy:   ;rdi = dest rsi = src
-        xor rax, rax ;i = 0
+        xor rax, rax
         cmp rsi, 0
         je  return
         jmp copy
