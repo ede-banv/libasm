@@ -25,8 +25,12 @@ ft_neg:
 
 ft_pos:
         cmp r8b, [rsi + rax]
-        je ft_return
+        je ft_same
         mov rax, 1
+        jmp ft_return
+
+ft_same:
+        mov rax, 0
 
 ft_return:
         ret

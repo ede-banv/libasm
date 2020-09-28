@@ -11,6 +11,7 @@ ft_strdup:				;rdi = str
 	mov		rdi, rax
 	inc		rdi			;pr le \0
 	call	malloc
+	pop rsi
 	cmp		rax, 0
 	je		ft_error
 	mov		rdi, rax	;dest in call to ft_strcpy
